@@ -2,8 +2,8 @@
 <div id="ld" style="font-family:sans-serif;padding:40px;text-align:center;color:#555">Loading dashboard&hellip;</div>
 <script>
 (async function(){
-  var v = "20260921a"; // cache-busting version string -- bump this on every single deploy
-  var parts = ["part_000.txt", "part_001.txt", "part_002.txt", "part_003.txt", "part_004.txt"];
+  var v = "20260922a"; // cache-busting version string -- bump this on every single deploy
+  var parts = ["part_000.txt", "part_001.txt", "part_002.txt", "part_003.txt"];
   try {
     var texts = await Promise.all(parts.map(function(p){
       return fetch(p + "?v=" + v, {cache: "no-store"}).then(function(r){
